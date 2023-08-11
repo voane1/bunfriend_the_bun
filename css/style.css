@@ -4,27 +4,42 @@
     box-sizing: border-box;
 }
 
+
+
 .game-board {
-    width: 80%;
+    width: 100%;
     height: 500px;
-    border: 1px solid #333;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    background-image: url("/images/fundo.png");
+    /*background: linear-gradient(#87ceeb, #e0f6ff);*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  
+
 }
 
 .pipe {
     position: absolute;
-    bottom: 0;
-    width: 80px;
-    animation: pipe-animation 3s infinite linear;
+    bottom: 0;    
+    width: 150px;   
+    animation: pipe-animation 1.5s infinite linear;
 
 }
 
 .bunfriend{
-    width: 90px;
+    left: 100px;
+    width: 150px;
     position: absolute;
     bottom: 0;
+    
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+
 }
 
 @keyframes pipe-animation {
@@ -40,17 +55,23 @@
 }
 
 @keyframes jump {
-    begin{
+    0% {
         bottom: 0;
-
+    }
+    40%{
+        bottom: 180px;
     }
 
-    middle{
-        bottom: ;
-
+   50%{
+        bottom: 180px;
     }
 
-    end{
+    60%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
 
     }
     

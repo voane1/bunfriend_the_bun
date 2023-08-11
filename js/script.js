@@ -1,6 +1,6 @@
 const bunfriend = document.querySelector('.bunfriend');
-
 const pipe = document.querySelector('.pipe');
+const clouds = document.querySelector('.clouds')
 
 
 const jump = () => {
@@ -16,6 +16,8 @@ const loop = setInterval(() => {
 
     const pipePosition = pipe.offsetLeft;
     const bunfriendPosition = +window.getComputedStyle(bunfriend).bottom.replace('px', '');
+    const cloudPositions = clouds.offsetLeft;
+    
 
     if (pipePosition <= 120 && pipePosition > 0 && bunfriendPosition < 80){
 
@@ -27,6 +29,11 @@ const loop = setInterval(() => {
 
         bunfriend.src = './images/gameover.png';
         bunfriend.style.width = '160px';
+
+        clouds.style.animation = 'none'; 
+        clouds.style.left =`${cloudPositions}px`; 
+
+
         
         //se precisar ajustar margin usar os comandos style.marginLeft 
         clearInterval(loop);

@@ -42,6 +42,13 @@
 
 }
 
+.clouds{
+    
+    position: absolute;
+    width: 250px;
+    animation: clouds-animation 20s infinite linear;
+}
+
 @keyframes pipe-animation {
     from {
         right: -80px;
@@ -73,6 +80,18 @@
     100%{
         bottom: 0;
 
+    }
+    
+}
+
+@keyframes clouds-animation {
+
+    from{
+        right: -100px;
+    }
+
+    to {
+        right: 100%;
     }
     
 }
